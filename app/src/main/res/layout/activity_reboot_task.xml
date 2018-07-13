@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/all_app_activity_bg">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center">
+
+            <com.wangxc.business.SwitchButton
+                android:id="@+id/switchButtonA"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center">
+            </com.wangxc.business.SwitchButton>
+
+            <TimePicker
+                android:id="@+id/timePickerA"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            >
+
+            <com.wangxc.business.SwitchButton
+                android:id="@+id/switchButtonB"
+                android:layout_width="0dip"
+                android:layout_height="10dip"
+                android:layout_weight="1"
+                android:gravity="center">
+            </com.wangxc.business.SwitchButton>
+
+            <TimePicker
+                android:id="@+id/timePickerB"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                />
+        </LinearLayout>
+        <Button
+            android:id="@+id/save_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="10dp"
+            android:minHeight="50dp"
+            android:minWidth="140dp"
+            android:text="保存设置"
+            android:textColor="@android:color/black"
+            android:background="@drawable/sp_selector"
+            android:focusable="true"
+            android:clickable="true"
+            />
+    </LinearLayout>
+
+</LinearLayout>

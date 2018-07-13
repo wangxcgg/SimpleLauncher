@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:focusable="false"
+    android:background="@drawable/livezone_bg"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="70.0dip"
+        android:layout_marginTop="10.0dip"
+        android:text="开机启动设置"
+        android:textColor="#ffffffff"
+        android:textSize="30.0px" />
+
+    <ListView
+        android:id="@+id/allapp_lv"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10.0dip"
+        android:layout_marginLeft="70.0dip"
+        android:layout_marginRight="70.0dip"
+        android:layout_marginTop="15.0dip" />
+
+</LinearLayout>

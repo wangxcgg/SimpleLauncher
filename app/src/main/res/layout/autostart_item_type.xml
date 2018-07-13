@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_height="fill_parent"
+	android:layout_width="fill_parent"
+	android:orientation="horizontal"
+	android:id="@+id/item"
+	android:descendantFocusability="blocksDescendants"
+	android:layout_marginLeft="15dip"
+    android:layout_marginRight="15dip" 
+    android:minHeight="60dip"
+	><!-- android:background="#ff888888" huise -->
+	<!-- android:descendantFocusability="blocksDescendants" -->
+	<RelativeLayout
+		android:layout_height="wrap_content"
+		android:layout_width="0dip"
+		android:orientation="horizontal"
+		android:focusable="false"
+		android:layout_margin="5dip"
+		android:layout_gravity="center_vertical"
+		android:layout_weight="4">
+		<ImageView
+			android:layout_width="60dip"
+			android:layout_height="60dip"
+			android:scaleType="fitXY"
+			android:id="@+id/ItemImage"
+			android:layout_marginTop="5dip"
+			android:layout_marginLeft="50dip"
+			android:focusable="false">
+		</ImageView>
+
+		<TextView
+			android:layout_width="wrap_content"
+			android:layout_height="65dip"			
+			android:id="@+id/ItemText"
+			android:layout_toRightOf="@id/ItemImage"
+			android:layout_gravity="center_vertical"
+			android:gravity="center"
+			android:textSize="30px"
+			android:textColor="#FFFFFFFF"
+			android:layout_marginLeft="20dip"
+			android:focusable="false">
+		</TextView>
+		<!-- android:layout_centerHorizontal="true" 
+					android:textSize="34sp"
+					android:textColor="#FFFFFFFF"-->
+	</RelativeLayout>
+	<TextView android:layout_width="0dip"
+			 android:layout_height="fill_parent"
+			  android:id="@+id/ItemTV"
+			  android:textSize="30px"
+			  android:gravity="center"
+			  android:textColor="#FFFFFFFF"
+			  android:layout_weight="1">    
+	</TextView>
+		<com.wangxc.business.SwitchButton
+		    android:id="@+id/ItemSwitchBtn"
+			android:layout_width="0dip"
+			android:layout_height="10dip"
+			android:gravity="center"
+			android:layout_weight="1"
+			android:focusable="false"
+			android:clickable="false">
+		</com.wangxc.business.SwitchButton>
+	    
+	     
+</LinearLayout>

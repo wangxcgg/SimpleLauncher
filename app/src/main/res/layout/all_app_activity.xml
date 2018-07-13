@@ -1,0 +1,19 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/all_app_activity_bg">
+
+    <!-- All applications on the top side of the screen -->
+    <GridView android:id="@+id/all_apps"
+        android:persistentDrawingCache="animation|scrolling"
+        android:alwaysDrawnWithCache="true"    
+        android:numColumns="auto_fit"
+        android:columnWidth="200dp"
+        android:stretchMode="spacingWidth"
+        android:layout_weight="1.0"
+        android:layout_height="0dip"
+        android:layout_width="match_parent"
+		android:listSelector="@drawable/grid_selector"
+        android:visibility="visible" />
+</LinearLayout>
