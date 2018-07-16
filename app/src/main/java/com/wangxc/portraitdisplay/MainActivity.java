@@ -5,6 +5,8 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.SystemClock;
 import android.util.Log;
 import android.view.KeyEvent;
 import android.view.View;
@@ -34,8 +36,49 @@ public class MainActivity extends Activity {
 
         sharedPreferences = getSharedPreferences("reboot_task", Context.MODE_PRIVATE);
         editor = sharedPreferences.edit();
+        do_boot_app();
         AddAlarmTask();
     }
+
+
+
+    private void do_boot_app() {
+        Handler threadHandler = new Handler();
+        threadHandler.postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                // 判断启动时间
+                long boottime = SystemClock.elapsedRealtime();
+                Log.d(TAG, "boottime =" + boottime);
+                if (boottime >= 300000) {
+                    Log.d(TAG, "boottime last than 5 min,return! ");
+                    return;
+                }
+                SharedPreferences sp = getSharedPreferences("boot_app_setting",
+                        MODE_PRIVATE);
+                String boot_app = sp.getString("boot_app", "");
+                Log.d(TAG, "boot_app form SharedPreferences =" + boot_app);
+
+                if (boot_app.equals("")) {
+                    return;
+                }
+                try {
+                    Intent i = getPackageManager().getLaunchIntentForPackage(
+                            boot_app);
+                    startActivity(i);
+
+                } catch (Exception e) {
+                    Log.e(TAG, "boot app failed!");
+                    e.printStackTrace();
+                }
+
+            }
+
+        }, 10000);
+
+    }
+
+
 
     private void AddAlarmTask() {
         String plan_A = sharedPreferences.getString("plan_A", "none");
@@ -110,19 +153,10 @@ public class MainActivity extends Activity {
             return super.dispatchKeyEvent(event);
         }
         Log.d(TAG, "nKeyCode=" + nKeyCode);
+        if (nKeyCode == KeyEvent.KEYCODE_BACK) {
+            return true;
+        }
 
-//        if (nKeyCode == KeyEvent.KEYCODE_DPAD_UP) {
-//            Toast.makeText(MainActivity.this, "按键向上", Toast.LENGTH_SHORT).show();
-//        }
-//        if (nKeyCode == KeyEvent.KEYCODE_DPAD_LEFT) {
-//            Toast.makeText(MainActivity.this, "按键向左", Toast.LENGTH_SHORT).show();
-//        }
-//        if (nKeyCode == KeyEvent.KEYCODE_DPAD_DOWN) {
-//            Toast.makeText(MainActivity.this, "按键向下", Toast.LENGTH_SHORT).show();
-//        }
-//        if (nKeyCode == KeyEvent.KEYCODE_DPAD_RIGHT) {
-//            Toast.makeText(MainActivity.this, "按键向右", Toast.LENGTH_SHORT).show();
-//        }
         return super.dispatchKeyEvent(event);
     }
 

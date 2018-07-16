@@ -9,13 +9,6 @@
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
         android:layout_marginTop="10dp">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Step1."
-            android:textColor="@color/colorAccent"/>
-
         <Button
             android:id="@+id/button1"
             android:layout_width="wrap_content"
@@ -30,12 +23,6 @@
         android:layout_below="@+id/LinearLayout1"
         android:layout_centerHorizontal="true">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Step2."
-            android:textColor="@color/colorAccent"/>
-
         <Button
             android:id="@+id/button2"
             android:layout_width="wrap_content"
@@ -49,13 +36,6 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/LinearLayout2"
         android:layout_centerHorizontal="true">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Step3."
-            android:textColor="@color/colorAccent"/>
-
         <Button
             android:id="@+id/button3"
             android:layout_width="wrap_content"
@@ -68,13 +48,6 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/LinearLayout3"
         android:layout_centerHorizontal="true">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Step4."
-            android:textColor="@color/colorAccent"/>
-
         <Button
             android:id="@+id/button4"
             android:layout_width="wrap_content"

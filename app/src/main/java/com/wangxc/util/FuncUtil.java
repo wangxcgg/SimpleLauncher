@@ -667,7 +667,7 @@ public class FuncUtil {
 	//设置闹钟，不同的闹钟有不同的请求码
 	public static void setAlarmTime(Context context, int requestCode, long triggerAtMillis) {
 		AlarmManager am = (AlarmManager)context.getSystemService(Context.ALARM_SERVICE);
-		Intent intent = new Intent("android.moons.multiLauncherGZ.alarm.action");
+		Intent intent = new Intent("android.moons.portraitdisplay.alarm.action");
 		PendingIntent sender = PendingIntent.getBroadcast(
 				context, requestCode, intent, PendingIntent.FLAG_CANCEL_CURRENT);
 		//第一个参数表明使用的是绝对时间，而第二个参数说明是自1970年1月1日0:00至Calendar实例对象设定的时间的毫秒数

@@ -15,7 +15,7 @@ import java.util.Calendar;
 
 public class AlarmReceiver extends BroadcastReceiver {
     private static final String TAG = "AlarmReceiver";
-    private static final String ALARM_ACTION = "android.moons.multiLauncherGZ.alarm.action";
+    private static final String ALARM_ACTION = "android.moons.portraitdisplay.alarm.action";
     private String plan_A;
     private String plan_B;
     private String time_A;

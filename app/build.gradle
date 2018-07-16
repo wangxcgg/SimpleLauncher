@@ -7,8 +7,8 @@ android {
         applicationId "com.wangxc.portraitdisplay"
         minSdkVersion 17
         targetSdkVersion 26
-        versionCode 133
-        versionName "1.1"
+        versionCode 135
+        versionName "1.2"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
         useLibrary 'org.apache.http.legacy'
     }
